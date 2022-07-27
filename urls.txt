@@ -1,3 +1,3 @@
 [URL01] https://github.com/Babawale/Project_3_CICD_Auto_Deploy_Powers
 
-[URL02] https://us-east-1.console.aws.amazon.com/s3/buckets/udapeople-51cae5a?region=us-east-1&tab=objects
+[URL02] http://udapeople-51cae5a.s3-website-us-east-1.amazonaws.com
