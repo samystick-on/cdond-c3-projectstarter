@@ -68,7 +68,7 @@ jobs:
           name: Back-end build
           command: |
              cd backend
-             npm install
+             npm install -g npm
              npm run build
       - save_cache:
           paths: [backend/node_modules]
@@ -224,8 +224,8 @@ jobs:
     steps:
       # Checkout code from git
       - checkout
-      # - restore_cache:
-      #     keys: [backend-build]
+      - restore_cache:
+          keys: [backend-build]
       
       # - run:
       #     name: Install dependencies
@@ -236,8 +236,7 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            npm install
-            npm audit fix --audit-level=critical
+            npm install -g npm
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
