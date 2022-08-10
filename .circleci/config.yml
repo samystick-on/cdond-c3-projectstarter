@@ -220,18 +220,23 @@ jobs:
   run-migrations:
     docker:
       # Docker image here that supports NodeJS
-      - image: cimg/node:18.4.0
+      - image: python:3.10-alpine3.16
     steps:
       # Checkout code from git
       - checkout
       - restore_cache:
           keys: [backend-build]
+      
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --update --no-cache nodejs npm aws-cli
+
       - run:
           name: Run migrations
           command: |
             cd backend
-            npm install --legacy-peer-deps
-            npm audit fix --audit-level=critical
+            npm install
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
