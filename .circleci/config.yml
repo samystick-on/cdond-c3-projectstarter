@@ -60,6 +60,7 @@ jobs:
   build-backend:
     docker:
       - image: circleci/node:13.8.0
+    become: true
     steps:
       - checkout
       - restore_cache:
@@ -221,6 +222,7 @@ jobs:
     docker:
       # Docker image here that supports NodeJS
       - image: circleci/node:13.8.0
+    become: true
     steps:
       # Checkout code from git
       - checkout
