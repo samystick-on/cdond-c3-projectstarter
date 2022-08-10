@@ -60,7 +60,6 @@ jobs:
   build-backend:
     docker:
       - image: circleci/node:13.8.0
-    become: true
     steps:
       - checkout
       - restore_cache:
@@ -69,7 +68,7 @@ jobs:
           name: Back-end build
           command: |
              cd backend
-             npm install -g npm
+             sudo npm install -g npm
              npm run build
       - save_cache:
           paths: [backend/node_modules]
@@ -238,7 +237,7 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            npm install -g npm
+            sudo npm install -g npm
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
