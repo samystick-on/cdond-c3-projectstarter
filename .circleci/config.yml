@@ -68,8 +68,8 @@ jobs:
           key: backend-build
 
   test-frontend:
-      # Docker image here
-      docker:
+    # Docker image here
+    docker:
       - image: circleci/node:13.8.0
     steps:
       # Checkout code from git
@@ -87,8 +87,8 @@ jobs:
                 
   
   test-backend:
-      # Docker image here
-      docker:
+    # Docker image here
+    docker:
       - image: circleci/node:13.8.0
     steps:
       # Checkout code from git
