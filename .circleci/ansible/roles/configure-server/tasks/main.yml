@@ -9,7 +9,6 @@
   apt:
     upgrade: yes
 
-
 - name: "remove stale dependencies"
   become: true
   apt:
