@@ -27,3 +27,4 @@
   roles:
     # Your code here
     - deploy
+    - configure-prometheus-node-exporter
