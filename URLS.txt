@@ -1,3 +1,0 @@
-[URL01]: https://github.com/samystick-on/cdond-c3-projectstarter
-
-[URL02]: http://udapeople-1a60440.s3-website-us-east-1.amazonaws.com
