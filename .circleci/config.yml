@@ -199,7 +199,7 @@ jobs:
       # Add ssh keys with fingerprint
       - add_ssh_keys:
           fingerprints:
-            - "0f:7c:2d:99:28:a9:34:bb:47:a6:4c:4f:fa:b8:2a:c3"
+            - "bb:13:9c:73:a1:6c:a6:87:3d:ab:14:f3:c2:38:2e:22"
       # attach workspace
       - attach_workspace:
           at: ~/
@@ -299,7 +299,7 @@ jobs:
       # Add ssh keys with fingerprint
       - add_ssh_keys:
          fingerprints:
-            - "0f:7c:2d:99:28:a9:34:bb:47:a6:4c:4f:fa:b8:2a:c3"
+            - "bb:13:9c:73:a1:6c:a6:87:3d:ab:14:f3:c2:38:2e:22"
       # attach workspace
       - attach_workspace:
           at: ~/
@@ -373,7 +373,7 @@ jobs:
             sleep 60
             if curl -v "${API_URL}/api/status" | grep "ok"
             then
-              return 0
+              return 1
             else
               return 1
             fi
